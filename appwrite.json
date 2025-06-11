@@ -1,0 +1,21 @@
+{
+    "projectId": "683f96ced413b5b89e38",
+    "databases": [
+        {
+            "$id": "683f976500031e1e281f",
+            "name": "SalonGym",
+            "enabled": true
+        }
+    ],
+    "collections": [
+        {
+            "$id": "683f97650003365f8cad",
+            "databaseId": "683f976500031e1e281f",
+            "name": "salon/GymRegistration",
+            "documentSecurity": true,
+            "attributes": [],
+            "indexes": [],
+            "enabled": true
+        }
+    ]
+}
