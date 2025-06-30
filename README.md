@@ -1,6 +1,7 @@
 # Beauty Fitness Near By
 
-![Project Banner](https://via.placeholder.com/1200x300?text=Beauty+Fitness+Near+By)
+![Project Banner](![main banner](https://github.com/user-attachments/assets/fa5886b9-3e73-4cdf-9f8d-94001b64906c)
+)
 
 ## 📋 Overview
 
@@ -30,7 +31,8 @@ Beauty Fitness Near By is a mobile application that helps users discover and con
 ## 📱 Screenshots
 
 <div style="display: flex; flex-direction: row;">
-  <img src="https://via.placeholder.com/250x500?text=Home+Screen" width="200" alt="Home Screen" />
+  <img src="![334shots_so](https://github.com/user-attachments/assets/361fd185-3ff9-4a0e-940a-6cab45447294)
+" width="200" alt="Home Screen" />
   <img src="https://via.placeholder.com/250x500?text=Search+Results" width="200" alt="Search Results" />
   <img src="https://via.placeholder.com/250x500?text=Business+Details" width="200" alt="Business Details" />
   <img src="https://via.placeholder.com/250x500?text=Booking+Screen" width="200" alt="Booking Screen" />
