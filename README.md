@@ -1,6 +1,6 @@
 # Beauty Fitness Near By
 
-![Project Banner](![main banner](https://github.com/user-attachments/assets/fa5886b9-3e73-4cdf-9f8d-94001b64906c)
+(![main banner](https://github.com/user-attachments/assets/fa5886b9-3e73-4cdf-9f8d-94001b64906c)
 )
 
 ## 📋 Overview
