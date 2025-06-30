@@ -31,10 +31,14 @@ Beauty Fitness Near By is a mobile application that helps users discover and con
 ## 📱 Screenshots
 
 <div style="display: flex; flex-direction: row;">
-  ![WhatsApp Image 2025-06-30 at 16 47 05_a17dea2d](https://github.com/user-attachments/assets/4cc19caa-8a73-4908-ad1f-11ac126b7d5a)
-![WhatsApp Image 2025-06-30 at 16 47 05_5fca2d18](https://github.com/user-attachments/assets/1c6f8a50-b4c7-4ae5-8610-c62a1c63c461)
-![WhatsApp Image 2025-06-30 at 16 50 55_9bf5a4f9](https://github.com/user-attachments/assets/2955f73c-0110-40c1-b300-5ccb0b1eec91)
-![WhatsApp Image 2025-06-30 at 16 50 54_ccaff182](https://github.com/user-attachments/assets/ce2cc882-1373-4b20-abcf-9a8b4a0a2c1f)
+  ![WhatsApp Image 2025-06-30 at 16 47 05_1acb9e17](https://github.com/user-attachments/assets/3f5f6abf-5943-4a9b-a5bf-3eba7566590f)
+
+![appointment](https://github.com/user-attachments/assets/62174bf1-810c-4740-87ba-532f9d2af810)
+
+![my booking](https://github.com/user-attachments/assets/e4e2b650-e1a0-4a1b-9beb-7ffd9c16618b)
+
+![adming booking](https://github.com/user-attachments/assets/862256e3-7ccf-43ba-8dca-edb6350166ab)
+
 
 
 
