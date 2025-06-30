@@ -30,19 +30,11 @@ Beauty Fitness Near By is a mobile application that helps users discover and con
 
 ## 📱 Screenshots
 
-<div style="display: flex; flex-direction: row;">
-  ![WhatsApp Image 2025-06-30 at 16 47 05_1acb9e17](https://github.com/user-attachments/assets/3f5f6abf-5943-4a9b-a5bf-3eba7566590f)
-
-![appointment](https://github.com/user-attachments/assets/62174bf1-810c-4740-87ba-532f9d2af810)
-
-![my booking](https://github.com/user-attachments/assets/e4e2b650-e1a0-4a1b-9beb-7ffd9c16618b)
-
-![adming booking](https://github.com/user-attachments/assets/862256e3-7ccf-43ba-8dca-edb6350166ab)
-
-
-
-
-  
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <img src="https://github.com/user-attachments/assets/3f5f6abf-5943-4a9b-a5bf-3eba7566590f" width="180" alt="App Screenshot 1" />
+  <img src="https://github.com/user-attachments/assets/62174bf1-810c-4740-87ba-532f9d2af810" width="180" alt="Appointment" />
+  <img src="https://github.com/user-attachments/assets/e4e2b650-e1a0-4a1b-9beb-7ffd9c16618b" width="180" alt="My Booking" />
+  <img src="https://github.com/user-attachments/assets/862256e3-7ccf-43ba-8dca-edb6350166ab" width="180" alt="Admin Booking" />
 </div>
 
 ## 🚀 Installation
