@@ -11,7 +11,6 @@ Beauty Fitness Near By is a mobile application that helps users discover and con
 
 - **Location-based search**: Find beauty and fitness services near your current location
 - **Service categories**: Browse through different categories including salons, gyms
-- 
 - **Detailed listings**: View comprehensive information about each business including services, pricing, and contact details
 - **Appointment booking**: Schedule appointments directly through the app
 - **Email notifications**: Receive updates about your bookings and special offers
