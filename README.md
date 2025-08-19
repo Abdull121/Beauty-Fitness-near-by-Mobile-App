@@ -36,6 +36,14 @@ Beauty Fitness Near By is a mobile application that helps users discover and con
   <img src="https://github.com/user-attachments/assets/862256e3-7ccf-43ba-8dca-edb6350166ab" width="180" alt="Admin Booking" />
 </div>
 
+
+## DEMO
+
+
+https://github.com/user-attachments/assets/bdcd9c81-44e3-4c80-a7f8-ba50478b0fd7
+
+
+
 ## 🚀 Installation
 
 Follow these steps to set up the project locally:
