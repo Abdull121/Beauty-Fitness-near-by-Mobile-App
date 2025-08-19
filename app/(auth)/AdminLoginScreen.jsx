@@ -84,6 +84,7 @@ export default function AdminLoginScreen() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setFormError('Please enter a valid email');
+      setIsLoading(false);
       return;
     }
     setFormError('');

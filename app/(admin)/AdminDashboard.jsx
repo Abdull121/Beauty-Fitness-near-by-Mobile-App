@@ -1,10 +1,12 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter, useNavigation, useLocalSearchParams } from 'expo-router';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef,useCallback, useState } from 'react';
 import config from '../../Appwrite/config'; 
 import auth from '../../Appwrite/auth';
 import AdminProfileModal from '../../components/AdminProfileModal'; 
+import { useFocusEffect } from '@react-navigation/native';
+import { BackHandler } from 'react-native';
 
 
 import {
@@ -48,6 +50,23 @@ export default function AdminDashboard()
   const slideAnim = useRef(new Animated.Value(0)).current;
 
   const navigation = useNavigation();
+  useFocusEffect(
+  useCallback(() => {
+    const onBackPress = () => {
+      // Exit the app if you're on this screen
+      if (Platform.OS === 'android') {
+        BackHandler.exitApp();
+        return true; // prevent default behavior (going back)
+      }
+      return false;
+    };
+
+     const subscription = BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+  return () => {
+    subscription.remove();
+  };
+  }, []));
 
   const fetchBookings = async () => {
     try {

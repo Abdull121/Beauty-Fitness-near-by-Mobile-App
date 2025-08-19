@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 import BookingModal from '../../../components/userBooking/BookingModal';
 import config from '../../../Appwrite/config'; 
-import { set } from 'date-fns';
+// import { set } from 'date-fns';
 
 export default function BusinessDetails() {
   const router = useRouter();
@@ -252,10 +252,12 @@ export default function BusinessDetails() {
         onClose={() => setShowBookingModal(false)}
         selectedService={selectedService}
         currentUser=""
-        userId={userId} //use for testing purpose // TODO: GET User ID from AUTH Appwrite 
+        userId={userId} 
         businessId={params?.businessId || params?.id} // ID for time slots
         businessOwnerId={params?.businessOwnerId} // Owner ID for bookings // Use ownerId if available, fall back to id parameter
         businessName={params.name||BUSINESS_DETAILS.name}
+        adminEmail={params?.email}
+        
       />
     </SafeAreaView>
   );

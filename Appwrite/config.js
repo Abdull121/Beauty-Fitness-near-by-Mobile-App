@@ -5,7 +5,6 @@ import * as FileSystem from 'expo-file-system'; // for converting image to Blob
 
 
 
-
 export class Service{
     
 

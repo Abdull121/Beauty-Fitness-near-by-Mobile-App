@@ -17,8 +17,9 @@ import ServiceDetails from './ServiceDetails';
 import TimeSlotPicker from './TimeSlotPicker';
 import UserDetailsForm from './UserDetailsForm';
 import  config from '../../Appwrite/config';
+import { sendEmail } from '../../services/emailservices';
 
-// Helper function to convert UTC to PKT (UTC+5)
+// Helper function to convert UTC to PKT (UTC+5)  
 const convertUTCtoPKT = (utcTime) => {
   const pktTime = new Date(utcTime);
   pktTime.setHours(pktTime.getHours() + 5);
@@ -34,6 +35,7 @@ const BookingModal = ({
   businessId,
   businessOwnerId= '',
    businessName,
+   adminEmail = '',
 }) => {
   
   useEffect(() => {
@@ -234,15 +236,35 @@ businessOwnerId
 
          }
 
-     
+      // Send email notification
+const emailPayload = {
+  role: 'admin',
+  name: formData.name,
+  email: adminEmail,
+};
 
+try {
+  const sendEmailResponse = await sendEmail(emailPayload);
+  console.log('Email send response:', sendEmailResponse);
+  
+  if (sendEmailResponse.success) {
+    console.log('Email sent successfully');
+   
+  } else {
+    console.log('Failed to send email:', sendEmailResponse.message);
+    // Alert.alert('Error', sendEmailResponse.message || 'Failed to send email notification');
+  }
+} catch (error) {
+  console.log('Email error:', error);
+  // Alert.alert('Error', error.message || 'Failed to send email');
+}
       
-      
+     
       
     } catch (error) {
       // Log error
-      console.error('Booking Error:', error);
-      Alert.alert('Error', 'Failed to book appointment. Please try again.');
+      console.log('Booking Error:', error);
+     
     } finally {
       setLoading(false);
     }

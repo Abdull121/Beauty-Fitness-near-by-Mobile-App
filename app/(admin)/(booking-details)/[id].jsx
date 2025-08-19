@@ -14,7 +14,7 @@ import {
   View,
 } from 'react-native';
 
- 
+ import { sendEmail } from '../../../services/emailservices'; // Import the email service
 
 import config from '../../../Appwrite/config'; 
 
@@ -79,7 +79,7 @@ export default function BookingDetails() {
           style: 'cancel',
         },
         {
-          text: 'Yes',          onPress: async () => {
+          text: 'Yes', onPress: async () => {
             // Implement the action logic here
 
             const updateStatus = await config.updateBookingStatus(booking.$id, action);
@@ -100,6 +100,35 @@ export default function BookingDetails() {
                 timestamp: new Date().getTime()
               }
             });
+
+
+             // Send email notification
+            const emailPayload = {
+              role: 'user',
+              name: booking.customerName,
+              email: booking.customerEmail,
+              service: booking.serviceName,
+              appointmentDate: booking.appointmentDate,
+              status: action,
+            };
+            
+            try {
+              const sendEmailResponse = await sendEmail(emailPayload);
+              console.log('Email send response:', sendEmailResponse);
+              
+              if (sendEmailResponse.success) {
+                console.log('Email sent successfully');
+               
+              } else {
+                console.log('Failed to send email:', sendEmailResponse.message);
+                // Alert.alert('Error', sendEmailResponse.message || 'Failed to send email notification');
+              }
+            } catch (error) {
+              console.log('Email error:', error);
+              // Alert.alert('Error', error.message || 'Failed to send email');
+            }
+
+
           },
         },
       ]

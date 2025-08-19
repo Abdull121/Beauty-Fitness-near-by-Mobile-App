@@ -1,7 +1,7 @@
   import { Ionicons } from '@expo/vector-icons';
   import { LinearGradient } from 'expo-linear-gradient';
   import { useRouter } from 'expo-router';
-  import { useCallback, useEffect, useState } from 'react';
+  import {useCallback, useEffect, useState } from 'react';
   import {
       ActivityIndicator,
       FlatList,
@@ -20,6 +20,8 @@
   import auth from '../../Appwrite/auth';
   import LocationService from '../../components/LocationService';
   import AdminProfileModal from '../../components/AdminProfileModal'; 
+  import { useFocusEffect } from '@react-navigation/native';
+  import { BackHandler } from 'react-native';
 
   // Categories for filtering
   const CATEGORIES = [
@@ -27,7 +29,7 @@
     { id: '2', name: 'Salon', icon: 'cut' },
     { id: '3', name: 'Gym', icon: 'barbell' },
   ];
-  const MIN_SPINNER_TIME = 20000;
+  const MIN_SPINNER_TIME = 25000;
 
   // Helper function to check if a business is currently open based on its hours
   const isBusinessOpen = (timingOpen, timingClose) => {
@@ -109,14 +111,34 @@
     const [isOverallLoading, setIsOverallLoading] = useState(true)
 
     const [minSpinnerTimePassed, setMinSpinnerTimePassed] = useState(false);
-
-    useEffect(() => {
-  const timer = setTimeout(() => {
+    useEffect(()=>{
+        const timer = setTimeout(() => {
     setMinSpinnerTimePassed(true);
   }, MIN_SPINNER_TIME);
 
   return () => clearTimeout(timer);
-}, []);
+    }, []);
+
+    useFocusEffect(
+      
+    useCallback(() => {
+      const onBackPress = () => {
+        if (Platform.OS === 'android') {
+          BackHandler.exitApp();
+          return true;
+        }
+        return false;
+      };
+       const subscription = BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+  return () => {
+    subscription.remove();
+  };
+      
+    }, [])
+  );
+
+
 
 
     
